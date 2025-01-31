@@ -1,0 +1,271 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background: whitesmoke;
+    padding: 1rem 5rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    background: linear-gradient(45deg, rgba(183, 204, 248, 0.717), rgba(7, 43, 127, 0.679)), 
+                url('https://img.freepik.com/free-photo/blue-sky-with-cloud-closeup_150588-124.jpg?t=st=1710145731~exp=1710149331~hmac=312231e34af28df68a64a9b006a4a627d0f623f0ba6e19eb23e5aceae935e41e&w=360');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the background image fixed */
+}
+
+/* Scrollable container with invisible scrollbar */
+.scrollable-container {
+    overflow-y: scroll; /* Enables vertical scrolling */
+    max-height: calc(100vh - 100px); /* Example height adjustment */
+}
+
+/* Invisible scrollbar styling */
+.scrollable-container::-webkit-scrollbar {
+    width: 0; /* Invisible scrollbar width for Webkit-based browsers */
+    height: 0;
+}
+
+.scrollable-container {
+    scrollbar-width: thin; /* Keeps the scrollbar functional on Firefox */
+    scrollbar-color: transparent transparent; /* Makes the scrollbar invisible on Firefox */
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: rgb(242, 242, 35);
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Search Bar */
+#input {
+    font-size: 14px;
+    padding: 8px 12px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: aliceblue;
+    margin-right: 10px;
+}
+
+#search {
+    background: none;
+    padding: 8px 15px;
+    color: aliceblue;
+    outline: none;
+    background: cadetblue;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+}
+
+/* Weather Styling */
+.weather {
+    text-align: center;
+    color: rgb(255, 255, 240);
+}
+
+#city {
+    font-size: 30px;
+}
+
+.weather img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(240, 248, 255, 0.408);
+}
+
+#temperature {
+    font-size: 50px;
+    margin: 0;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: white; /* Temperature font color changed to white */
+}
+
+.temp-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#clouds {
+    font-size: 20px;
+    background: rgba(153, 205, 50, 0.778);
+    padding: 2px 20px;
+    border-radius: 15px;
+}
+
+/* Layout Styling */
+main {
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+    grid-column-gap: 25px;
+    align-items: start;
+    margin: 0 50px;
+    color: white;
+}
+
+/* Vertical Divider Styling */
+.divider1 {
+    background: rgba(254, 189, 132, 0.539);
+    height: 380px;
+    border-radius: 6px;
+}
+
+.divider2 {
+    height: 20px;
+    width: 20%;
+    margin: 0 auto;
+}
+
+/* Upcoming Forecast Styling */
+.forecast {
+    text-align: left;
+    color: white;
+    padding: 20px;
+    background: hwb(60 3% 7% / 0.15); /* Slight background color */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Forecast Details (Day, Temp, etc.) */
+.next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.next p,
+.next h3 {
+    margin: 3px 0;
+}
+
+/* Forecast Week Layout */
+.weekF {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Individual Forecast Day Layout */
+.dayF {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 90px;
+    width: 180px;
+}
+
+/* Forecast Header Styling */
+.cast-header {
+    color: aliceblue;
+    background: rgba(254, 189, 132, 0.539);
+    width: max-content;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Time and Date Styling */
+.time,
+.date {
+    color: rgb(254, 189, 132);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Description Styling */
+.desc {
+    color: rgb(196, 255, 77);
+    font-size: 14px;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .divider1 {
+        display: none;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        height: 100vh;
+        padding-bottom: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    #input {
+        width: 70%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #search {
+        width: 25%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .weekF {
+        grid-template-columns: 1fr;
+    }
+
+    .dayF {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .temp-box {
+        flex-direction: column;
+    }
+}
