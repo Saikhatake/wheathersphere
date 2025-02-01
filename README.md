@@ -43,8 +43,7 @@ npm start
 2. Press Enter or click the search button.
 3. View the current weather and the 5-day forecast.
 
-## 🖼 Screenshots
-_Add screenshots of the website here._
+
 
 ## 📌 Future Enhancements
 - Add geolocation-based weather detection
@@ -69,6 +68,5 @@ Pull requests are welcome! Follow these steps:
    ```
 5. Open a pull request
 
-## 📜 License
-This project is licensed under the MIT License.
+
 
